@@ -1,37 +1,43 @@
 *{
     margin: 0%;
+    padding: 0;
 }
+
 body{
-    background: linear-gradient(#01012e,#240019);
+    background: linear-gradient(#01012e, #240019);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
+
 h1{
     text-transform: uppercase;
     text-align: center;
-    color:#7e868d;
-    box-shadow:0 0 100px #fff;
-    max-width: 9%;
-    padding: 20px 10px;
-    border-radius: 50%;
+    color: #7e868d;
+    box-shadow: 0 0 100px #fff;
+    max-width: 20%; /* Make the moon smaller on large screens */
+    padding: 40px;
+    border-radius: 50%; /* Circular moon shape */
     background: #fff;
-    
+    margin: 20px auto; /* Center the moon horizontally */
+    font-size: 2rem; /* Adjust the text size */
 }
+
 nav{
     background: url(stars1.png);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
+
 ul{
     text-align: center;
 }
+
 ul li{
     list-style: none;
     margin: 70px 0;
 }
+
 ul li a{
     color: #fff;
     text-decoration: none;
@@ -39,15 +45,17 @@ ul li a{
     font-weight: 500;
     letter-spacing: 4px;
     background: darkblue;
-    padding: 16px , 15px;
+    padding: 16px 15px;
     border-radius: 20px;
     display: inline-block;
     text-transform: uppercase;
     z-index: 100;
 }
+
 ul:hover li a{
- opacity: 0;
+    opacity: 0;
 }
+
 ul li a:hover{
     transform: scale(1.5);
     transition: 0.5s;
@@ -57,30 +65,92 @@ ul li a:hover{
     border-color: #8b008b;
     border-radius: 90%;
     opacity: 1;
-
 }
+
 ul li::after{
     content: attr(data-text);
     color: #1ef3e8;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 80px;
-    font-weight:900;
+    font-weight: 900;
     text-transform: uppercase;
     pointer-events: none;
     opacity: 0;
     transition: 0.5s;
     letter-spacing: 50px;
 }
+
 ul li:hover::after{
     opacity: 0.5;
     letter-spacing: 5px;
-
-} 
+}
 
 img{
-    margin-left:19%;
+    margin-left: 19%;
     width: 60%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Make the moon slightly larger or same size on small screens */
+    h1 {
+        max-width: 40%;
+        font-size: 2.5rem;
+        padding: 30px;
+    }
+
+    /* Adjust image for mobile */
+    img {
+        margin-left: 0;
+        width: 80%;
+    }
+
+    /* Adjust navigation for smaller screens */
+    ul li {
+        margin: 40px 0;
+    }
+
+    /* Make nav links smaller */
+    ul li a {
+        font-size: 18px;
+        letter-spacing: 2px;
+        padding: 12px;
+    }
+
+    /* Reduce space for smaller screen */
+    nav {
+        height: auto;
+        padding: 20px;
+    }
+
+    ul li::after {
+        font-size: 50px;
+        letter-spacing: 30px;
+    }
+}
+
+/* For very small screens, like phones in portrait mode */
+@media (max-width: 480px) {
+    h1 {
+        max-width: 50%;
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    /* Ensure the navigation links are stacked vertically */
+    ul {
+        display: block;
+    }
+
+    ul li {
+        margin: 30px 0;
+    }
+
+    img {
+        width: 100%;
+        margin-left: 0;
+    }
 }
