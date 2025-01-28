@@ -1,0 +1,126 @@
+*{
+    margin: 0%;
+}
+body{
+    background: linear-gradient(#01012e,#240019);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    color:#7e868d;
+    box-shadow:0 0 100px #fff;
+    max-width: 9%;
+    padding: 20px 10px;
+    border-radius: 50%;
+    background: #fff;
+    
+}
+nav{
+    background: url(stars1.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul{
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    margin: 70px 0;
+}
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background: darkblue;
+    padding: 16px , 15px;
+    border-radius: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    z-index: 100;
+}
+ul:hover li a{
+ opacity: 0;
+}
+ul li a:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+    color: #fff;
+    background: #8b008b;
+    border-style: double;
+    border-color: #8b008b;
+    border-radius: 90%;
+    opacity: 1;
+
+}
+ul li::after{
+    content: attr(data-text);
+    color: #1ef3e8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight:900;
+    text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+    letter-spacing: 50px;
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+
+} 
+
+img{
+    margin-left:19%;
+    width: 60%;
+}
+
+@media (min-width:300px) and (max-width:892px){
+    body{
+        zoom: 3.5;
+        max-height: 2000px;
+        min-height: 1000px;
+        min-width:180%;
+        overflow: hidden;
+        
+    }
+    h1{
+        text-transform: uppercase;
+        color:#7e868d;
+        box-shadow:0 0 100px #fff;
+        max-width: 15%;
+        padding: 35px 50px;
+        border-radius: 50%;
+        background: #fff;
+    }
+    nav{
+        width: 18pc;
+    }
+
+    ul li::after{
+        content: attr(data-text);
+        color: #1ef3e8;
+        position:absolute;
+        left: 190%;
+        top: 85%;
+        transform: translate(-45%,90%);
+        font-size: 60px;
+        font-weight:100;
+        text-transform: uppercase;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.5s;
+        letter-spacing: 50px;
+    }
+
+}
