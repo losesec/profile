@@ -15,4 +15,4 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag('js', new Date());
-gtag('config', 'G-94GYTTBD9Z');
+gtag('config', 'G-1ED5SPKCND');
