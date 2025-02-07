@@ -65,7 +65,8 @@ pre{
 
 .icon{
 
-    width: 50px;
+    padding:10px;
+    width: 40px;
     border-radius: 68px;
 }
 
@@ -86,6 +87,12 @@ pre{
     margin: 30px 30px;
     padding: 40px;
     border-radius: 30px;
+}
+
+.support{
+    display: block;
+    border-radius:950px;
+    width: 100px;
 }
 
 @media (min-width:312px) and (max-width:892px){
